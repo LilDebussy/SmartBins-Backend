@@ -57,7 +57,7 @@ let bins = [
     "lastPickup": "2026-05-08T18:00:00+02:00",
     "nextPickup": "2026-05-10T18:00:00+02:00",
     "wasteLevels": {
-      "cristal": 10, "papel": 90, "plastico": 85, "organico": 5, "resto": 50
+      "cristal": 10, "papel": 90, "plastico": 100, "organico": 5, "resto": 50
     },
     "predictedFull": { "papel": "2026-05-10T09:00:00+02:00", "plastico": "2026-05-10T11:00:00+02:00" },
     "animals": { "palomas": "media", "ratas": "baja", "cerdos": "baja" }
