@@ -31,7 +31,78 @@ let bins = [
       "palomas": "baja",
       "ratas": "baja",
       "cerdos": "baja"
-    }
+    },
+    
+  },
+  {
+    "id": "2",
+    "name": "Contenedor Nou Barris-A",
+    "lat": 41.4421,
+    "lng": 2.1748,
+    "description": "Cerca de la entrada del Parc Central de Nou Barris.",
+    "lastPickup": "2026-05-10T02:00:00+02:00",
+    "nextPickup": "2026-05-11T02:00:00+02:00",
+    "wasteLevels": {
+      "cristal": 80, "papel": 15, "plastico": 60, "organico": 45, "resto": 20
+    },
+    "predictedFull": { "cristal": "2026-05-10T20:00:00+02:00" },
+    "animals": { "palomas": "alta", "ratas": "media", "cerdos": "baja" }
+  },
+  {
+    "id": "3",
+    "name": "Punto Verde Marie Curie",
+    "lat": 41.4382,
+    "lng": 2.1785,
+    "description": "Esquina con Carrer de l'Alberes.",
+    "lastPickup": "2026-05-08T18:00:00+02:00",
+    "nextPickup": "2026-05-10T18:00:00+02:00",
+    "wasteLevels": {
+      "cristal": 10, "papel": 90, "plastico": 85, "organico": 5, "resto": 50
+    },
+    "predictedFull": { "papel": "2026-05-10T09:00:00+02:00", "plastico": "2026-05-10T11:00:00+02:00" },
+    "animals": { "palomas": "media", "ratas": "baja", "cerdos": "baja" }
+  },
+  {
+    "id": "4",
+    "name": "Papelera Metro Canyelles",
+    "lat": 41.4435,
+    "lng": 2.1698,
+    "description": "Salida de metro, zona de alto tránsito.",
+    "lastPickup": "2026-05-10T06:00:00+02:00",
+    "nextPickup": "2026-05-11T06:00:00+02:00",
+    "wasteLevels": {
+      "cristal": 0, "papel": 20, "plastico": 15, "organico": 80, "resto": 95
+    },
+    "predictedFull": { "resto": "2026-05-10T12:00:00+02:00" },
+    "animals": { "palomas": "alta", "ratas": "alta", "cerdos": "baja" }
+  },
+  {
+    "id": "5",
+    "name": "Contenedor Collserola Edge",
+    "lat": 41.4480,
+    "lng": 2.1650,
+    "description": "Límite forestal, zona propensa a fauna silvestre.",
+    "lastPickup": "2026-05-07T08:00:00+02:00",
+    "nextPickup": "2026-05-10T08:00:00+02:00",
+    "wasteLevels": {
+      "cristal": 12, "papel": 10, "plastico": 30, "organico": 75, "resto": 40
+    },
+    "predictedFull": { "organico": "2026-05-10T14:00:00+02:00" },
+    "animals": { "palomas": "baja", "ratas": "media", "cerdos": "muy alta" }
+  },
+  {
+    "id": "6",
+    "name": "Papelera Biblioteca Vilapicina",
+    "lat": 41.4312,
+    "lng": 2.1721,
+    "description": "Cerca de la zona de lectura exterior.",
+    "lastPickup": "2026-05-09T22:00:00+02:00",
+    "nextPickup": "2026-05-11T22:00:00+02:00",
+    "wasteLevels": {
+      "cristal": 0, "papel": 65, "plastico": 10, "organico": 5, "resto": 15
+    },
+    "predictedFull": { "papel": "2026-05-11T10:00:00+02:00" },
+    "animals": { "palomas": "media", "ratas": "baja", "cerdos": "baja" }
   }
 ];
 
