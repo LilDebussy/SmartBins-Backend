@@ -54,7 +54,7 @@ app.post('/api/update-bin', (req, res) => {
   if (binIndex !== -1) {
     // 1. Definimos los límites del sensor
     const minDist = 18;  // Equivale a 100%
-    const maxDist = 350; // Equivale a 0%
+    const maxDist = 250; // Equivale a 0%
 
     // 2. Calculamos el porcentaje invertido
     let percentage = ((maxDist - postDistance) / (maxDist - minDist)) * 100;
