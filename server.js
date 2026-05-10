@@ -1,13 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const PORT = 3000;
 
 // Middleware para parsear el cuerpo de las peticiones JSON
 app.use(express.json());
-
-app.use(cors({
-  origin: '*'
-}));
+app.use(cors());
 
 // Datos iniciales (Simulando una base de datos)
 let bins = [
