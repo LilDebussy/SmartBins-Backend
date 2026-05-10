@@ -112,26 +112,38 @@ app.get('/api/bins', (req, res) => {
 });
 
 // POST: Actualizar una papelera
+// POST: Actualizar una papelera
 app.post('/api/update-bin', (req, res) => {
   const { id, postDistance } = req.body;
 
-  // Validación básica
   if (!id || postDistance === undefined) {
     return res.status(400).json({ error: "Faltan campos requeridos: id o postDistance" });
   }
 
-  // Buscar la papelera por ID
   const binIndex = bins.findIndex(b => b.id === id);
 
   if (binIndex !== -1) {
-    // Aquí actualizamos el campo deseado. 
-    // Como 'postDistance' no estaba en el objeto original, lo añadimos o actualizamos.
-    bins[binIndex].wasteLevels.plastico = postDistance;
+    // 1. Definimos los límites del sensor
+    const minDist = 18;  // Equivale a 100%
+    const maxDist = 350; // Equivale a 0%
 
-    console.log(`Papelera ${id} actualizada con distancia: ${postDistance}`);
+    // 2. Calculamos el porcentaje invertido
+    let percentage = ((maxDist - postDistance) / (maxDist - minDist)) * 100;
+
+    // 3. Restringimos los valores entre 0 y 100 (Clamping)
+    percentage = Math.max(0, Math.min(100, percentage));
+
+    // Redondeamos para no tener decimales infinitos
+    const finalLevel = Math.round(percentage);
+
+    // 4. Actualizamos el nivel (ejemplo con plástico)
+    bins[binIndex].wasteLevels.plastico = finalLevel;
+
+    console.log(`Papelera ${id} - Distancia: ${postDistance}mm -> Nivel: ${finalLevel}%`);
 
     return res.status(200).json({
-      message: "Bin actualizada correctamente",
+      message: "Nivel de llenado actualizado",
+      calculatedLevel: finalLevel,
       bin: bins[binIndex]
     });
   } else {
