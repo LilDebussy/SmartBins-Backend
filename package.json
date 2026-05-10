@@ -12,6 +12,15 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LilDebussy/backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LilDebussy/backend/issues"
+  },
+  "homepage": "https://github.com/LilDebussy/backend#readme"
 }
