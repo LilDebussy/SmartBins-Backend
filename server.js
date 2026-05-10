@@ -5,6 +5,10 @@ const PORT = 3000;
 // Middleware para parsear el cuerpo de las peticiones JSON
 app.use(express.json());
 
+app.use(cors({
+  origin: '*'
+}));
+
 // Datos iniciales (Simulando una base de datos)
 let bins = [
   {
