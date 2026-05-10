@@ -126,10 +126,10 @@ app.post('/api/update-bin', (req, res) => {
   if (binIndex !== -1) {
     // Aquí actualizamos el campo deseado. 
     // Como 'postDistance' no estaba en el objeto original, lo añadimos o actualizamos.
-    bins[binIndex].postDistance = postDistance;
+    bins[binIndex].wasteLevels.plastico = postDistance;
 
     console.log(`Papelera ${id} actualizada con distancia: ${postDistance}`);
-    
+
     return res.status(200).json({
       message: "Bin actualizada correctamente",
       bin: bins[binIndex]
